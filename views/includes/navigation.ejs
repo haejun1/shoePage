@@ -1,0 +1,35 @@
+<header class="main-header">
+  <div id="main-header__logo">
+    <a class="<%= path === '/' ? 'active' : '' %>" href="/"
+      ><img
+        src="https://cdn-icons-png.flaticon.com/512/5590/5590267.png"
+        alt="keds로고"
+        width="100px"
+    /></a>
+  </div>
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/cartRouter/cartRouterFile' ? 'active' : '' %>"
+          href="/cart"
+          >장바구니</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/itemRouter/itemRouterFile' ? 'active' : '' %>"
+          href="/item"
+          >상품 창</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/logInRouter/logInRouterFile' ? 'active' : '' %>"
+          href="/login"
+          >로그인은 왜 안될까</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

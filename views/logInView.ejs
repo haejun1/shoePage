@@ -1,0 +1,12 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <p>로그인창입니다</p>
+  <form action="/login_check" method="post">
+    아이디 <input type="text" name="id">
+    비밀번호 <input type="text" name="pw" id="">
+    <input type="submit" value="로그인">
+  </form>
+  <%- include('includes/end.ejs') %>

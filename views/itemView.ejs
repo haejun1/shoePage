@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <p>상품들입니다</p>
+  <!-- 엑셀에서 가져온 데이터 출력 -->
+  <% for(var i = 0; i < data.length; i++) {%>
+    
+    <article> 
+      <form action="/detail">
+        <h1>
+          <!-- detailView 페이지로 이동... -->          
+          <input type="submit" name="data[i].index"><%= data[i].name %></input> 
+          
+          <br>
+        </h1>
+        <h2>
+          가격 : <%= data[i].price %>
+        </h2>
+      </form>
+      <form action="reviewRouterFile/add" method="post">
+          <button class="btn" type="submit">장바구니에 추가</button>
+          <input type="hidden" name="productId" value="<%= data[i].index %>">
+      </form>
+      
+    </article>
+<% } %>
+<%- include('includes/end.ejs') %>
