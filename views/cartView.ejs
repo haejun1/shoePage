@@ -1,26 +1,26 @@
 <%- include('includes/head.ejs') %>
-</head>
 
-<body>
     <%- include('includes/navigation.ejs') %>
-    <p>장바구니에요</p>
-    <% for(var i = 0; i < array.length; i++) {%>
-        <article>
-            <p>
-            <h1>
-                <a href="#"><%= array[i] %></a> 
-                <br>
-            </h1>
-            </p>
+        <p>장바구니에요</p>
+        <% for(var i=0; i < array.length; i++) {%>
+            <article>
+                <p>
+                <h1>
+                    <a href="#">
+                        <%= array[i] %>
+                    </a>
+                    <br>
+                </h1>
+                </p>
 
-        </article>
-    <% } %>
-    <main>
-    <div id="list">
+            </article>
+            <% } %>
+                <main>
+                    <div id="list">
 
-    </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./restFront.js"></script>
-    </main>
+                    </div>
+                    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                    <script src="./restFront.js"></script>
+                </main>
 
-<%- include('includes/end.ejs') %>
+                <%- include('includes/end.ejs') %>

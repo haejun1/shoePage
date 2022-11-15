@@ -1,19 +1,23 @@
 <%- include('includes/head.ejs') %>
-</head>
 
-<body>
   <%- include('includes/navigation.ejs') %>
-  <!-- 엑셀에서 가져온 데이터 출력 -->
-  <% for(var i = 0; i < data.length; i++) {%>
-    <article>
-      <p>
-        <h1> <%= data[i].name %></h1><br>
-        <h2>가격 : <%= data[i].price %></h2><br>
-        <h2>성별 : <%= data[i].tag %></h2><br>
-        <h2>타입 : <%= data[i].type %></h2><br>
-        <h2>설명 : <%= data[i].detail %></h2><br>
-      </p>
-      
-    </article>
-<% } %>
-<%- include('includes/end.ejs') %>
+    <!-- 엑셀에서 가져온 데이터 출력 -->
+    <% for(var i=0; i < data.length; i++) {%>
+      <article>
+        <p>
+        <h1>
+          <%= data[i].name %>
+        </h1><br>
+        <h2>가격 : <%= data[i].price %>
+        </h2><br>
+        <h2>성별 : <%= data[i].tag %>
+        </h2><br>
+        <h2>타입 : <%= data[i].type %>
+        </h2><br>
+        <h2>설명 : <%= data[i].detail %>
+        </h2><br>
+        </p>
+
+      </article>
+      <% } %>
+        <%- include('includes/end.ejs') %>

@@ -1,7 +1,7 @@
 const path = require("path");
-
 const express = require("express");
 const bodyParser = require("body-parser");
+const session = require("express-session");
 
 const app = express();
 
@@ -38,6 +38,17 @@ app.post("/itemRouter/itemRouterFile/add", (req, res) => {
 });
 
 //logIn
+
+app.use(
+  session({
+    //session 적용
+    secret: "@showpagesecret",
+    //암호화 시 사용키
+    resave: false, //세션을 접속할 때 마다 새로운 세션을 발급할지 말지를 결정
+    saveUninitialized: true, //세션 ID를 발급하지 않는 세션도 기록할지 결정
+  })
+);
+
 app.post("/login_check", (req, res) => {
   var id = req.body.id;
   var pw = req.body.pw;
