@@ -2,6 +2,7 @@
 
   <%- include('includes/navigation.ejs') %>
     <h2>로그인 창이에요</h2>
+
     <div>
       <% if(locals.logout){ %>
         <div class="alter alert-success text-center">
@@ -14,4 +15,8 @@
       비밀번호 <input type="password" name="password">
       <input type="submit" value="로그인">
     </form>
+
+    <script type="text/javascript">
+      alert('<%= msg %>')
+    </script>
     <%- include('includes/end.ejs') %>

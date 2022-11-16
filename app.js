@@ -49,11 +49,11 @@ app.use(
   })
 );
 
-app.post("/login_check", (req, res) => {
-  var id = req.body.id;
-  var pw = req.body.pw;
-  res.send(`id : ${id}, pw : ${pw}`);
-});
+// app.post("/login_check", (req, res) => {
+//   var id = req.body.id;
+//   var pw = req.body.pw;
+//   res.send(`id : ${id}, pw : ${pw}`);
+// });
 
 app.get("/detail", (req, res) => {
   var index = req.query.data[i].index;

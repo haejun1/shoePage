@@ -1,11 +1,12 @@
 <%- include('includes/head.ejs') %>
+  <%- include('includes/navigation.ejs') %>
+    <div id="login">
+      <h3>로그인 성공~</h3>
+      <h5>
+        <!-- <%= locals.user ? user : "User" %> -->
+        <%= user %>
+      </h5>
+      <a href="/login/logout" style="color:red">로그아웃</a>
+    </div>
 
-  <div id="login">
-    <h3>로그인 성공~</h3>
-    <h5>
-      <%= locals.user ? user : "User" %>
-    </h5>
-    <a href="/login/logout">로그아웃</a>
-  </div>
-
-  <%- include('includes/end.ejs') %>
+    <%- include('includes/end.ejs') %>
